@@ -1,5 +1,7 @@
 import { useState, type Dispatch, type SetStateAction } from "react"
 import type { DataType } from "../../Type"
+import { toast } from "react-toastify"
+
 
 export interface TCcardProps {
    DataCard : DataType
@@ -17,13 +19,16 @@ export default function TCcard({DataCard, selected, setSelected}: TCcardProps) {
   const  [AddToStack, setAddTostack] = useState<Boolean>(false)
 
   const HandleButtonClick = () => {
+
     setAddTostack(true)
     setSelected(newData)
+
+    toast.success(`${DataCard.name} added to your stack!`)
   }
-    
+
     return (
         <div>
-            <div className=" h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div className = {AddToStack ? " h-full flex-col rounded-2xl border border-t-red-600 bg-white p-5 " : " h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"}>
 
       {/* Top */}
       <div className="flex items-start justify-between">
@@ -104,7 +109,7 @@ export default function TCcard({DataCard, selected, setSelected}: TCcardProps) {
       {/* Bottom Button */}
       <button 
       onClick={HandleButtonClick} 
-      className="mt-6 w-full rounded-xl bg-gray-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-gray-800"
+      className = {AddToStack ? "mt-6 w-full rounded-xl  px-4 py-3 text-sm font-semibold text-red-600 border border-red-600" : "mt-6 w-full rounded-xl bg-gray-900 px-4 py-3 text-sm font-semibold text-white "}
       disabled = {AddToStack === true ? true : false}
       >
        

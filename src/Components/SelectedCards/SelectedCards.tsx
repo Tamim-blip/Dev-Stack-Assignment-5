@@ -5,6 +5,7 @@ import { TbX } from "react-icons/tb"
 import type { DataType } from "../../Type"
 import type { Dispatch, SetStateAction } from "react"
 
+
 interface SelectedCardsProps {
     selected: DataType[]
     setSelected: Dispatch<SetStateAction<DataType[]>>
@@ -81,7 +82,10 @@ export default function SelectedCards({
                 ))}
 
                 {/* Remove all button */}
+
+                
                 {selected.length > 0 && (
+                  
                     <button
                         onClick={() => setSelected([])}
                         className="mx-auto mt-5 block rounded-lg border border-red-600 px-6 py-2 text-red-700">
