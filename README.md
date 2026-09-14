@@ -1,32 +1,32 @@
-# React + TypeScript + Vite
+# 🚀 Technology Stack Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern and interactive **Technology Stack Builder** built with React, TypeScript, and Tailwind CSS.
+Users can explore available technologies and select the technologies they want to include in their personal development stack.
 
-Currently, two official plugins are available:
+## 🛠️ Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* ⚛️ **React**
+* 🔷 **TypeScript**
+* 🎨 **Tailwind CSS**
+* 🌐 **REST API**
+* ⚡ **Vite**
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. 🔍 Browse Technologies
 
-## Expanding the Oxlint configuration
+Users can view a collection of available technologies with useful information about each technology.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### 2. ➕ Build Your Own Stack
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+Users can select technologies and add them to their personal **Your Stack** section.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### 3. 🗑️ Manage Selected Technologies
+
+Users can easily remove technologies from their selected stack and update their choices dynamically.
+
+---
+
+### 💻 Project Goal
+
+This project was built to practice **React state management, TypeScript, API integration, component-based architecture, and Tailwind CSS** while creating a useful and interactive web application.
