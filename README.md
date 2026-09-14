@@ -33,7 +33,7 @@ This project was built to practice **React state management, TypeScript, API int
 
 
 
-### Ansar of all questions 
+### Answer of all questions 
 
 1. JSX is a syntax that lets us write HTML-like code inside JavaScript. It makes React components easier to write and understand.
 2. Props are data passed from a parent component to a child component. State is data managed inside a component that can change over time.
