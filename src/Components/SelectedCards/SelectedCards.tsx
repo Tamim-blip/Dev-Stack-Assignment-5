@@ -84,7 +84,7 @@ export default function SelectedCards({
                 {selected.length > 0 && (
                     <button
                         onClick={() => setSelected([])}
-                        className="mx-auto mt-5 block rounded-lg bg-black px-6 py-2 text-white">
+                        className="mx-auto mt-5 block rounded-lg border border-red-600 px-6 py-2 text-red-700">
                         Remove all
                     </button>
                 )}

@@ -102,8 +102,13 @@ export default function TCcard({DataCard, selected, setSelected}: TCcardProps) {
       </div>
 
       {/* Bottom Button */}
-      <button onClick={HandleButtonClick} className="mt-6 w-full rounded-xl bg-gray-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-gray-800">
-        {AddToStack === true ? "Selected" : " Add To Stack"  }
+      <button 
+      onClick={HandleButtonClick} 
+      className="mt-6 w-full rounded-xl bg-gray-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-gray-800"
+      disabled = {AddToStack === true ? true : false}
+      >
+       
+        {AddToStack === true ? "✓ Added to Stack": " Add To Stack"  }
         
       </button>
 
