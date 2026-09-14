@@ -4,6 +4,7 @@
 import { TbX } from "react-icons/tb"
 import type { DataType } from "../../Type"
 import type { Dispatch, SetStateAction } from "react"
+import { toast } from "react-toastify"
 
 
 interface SelectedCardsProps {
@@ -20,6 +21,10 @@ export default function SelectedCards({
 
     const handleRemove = (id: number) => {
         setSelected(prev => prev.filter(item => item.id !== id))
+
+        toast.success(` One item is removed from your stack!`)
+
+
     }
 
     return (
