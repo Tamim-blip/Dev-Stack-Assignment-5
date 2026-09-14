@@ -65,6 +65,13 @@ export default function SelectedCards({
             </div>
 
             {/*  */}
+            {/* Remove button */}
+              
+              <button
+                onClick={() => handleRemove(technology.id)}
+                className="text-4xl font-light text-[#151617]">
+                <TbX />
+              </button>
 
           </div>
          </div>
