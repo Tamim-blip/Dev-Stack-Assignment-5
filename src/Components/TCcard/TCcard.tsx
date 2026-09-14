@@ -1,11 +1,16 @@
-import { useState } from "react"
+import { useState, type Dispatch, type SetStateAction } from "react"
 import type { DataType } from "../../Type"
 
 export interface TCcardProps {
    DataCard : DataType
+   selected : DataType[]
+  setSelected : Dispatch<SetStateAction<DataType[]>>
 }
 
-export default function TCcard({DataCard}: TCcardProps) {
+export default function TCcard({DataCard, selected, setSelected}: TCcardProps) {
+
+
+  const newData = [...selected, DataCard]
 
 
 
@@ -13,6 +18,7 @@ export default function TCcard({DataCard}: TCcardProps) {
 
   const HandleButtonClick = () => {
     setAddTostack(true)
+    setSelected(newData)
   }
     
     return (

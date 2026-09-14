@@ -1,16 +1,21 @@
-import { use } from "react"
+import { use, useState} from "react"
 import type { DataType } from "../../Type"
 import AvailableCards from "../AvailableCards/AvailableCards"
 import SelectedCards from "../SelectedCards/SelectedCards"
 
 export interface TechnologyCardsProps {
     DataPromise : Promise<DataType[]>
+   
+
 }
 
 export default function TechnologyCards({DataPromise }: TechnologyCardsProps) {
 
     const technologyData = use(DataPromise)
     console.log(technologyData)
+
+
+    const [selected, setSelected] = useState<DataType[]>([])
     
     return (
         <div className="container mx-auto mt-10">
@@ -19,10 +24,10 @@ export default function TechnologyCards({DataPromise }: TechnologyCardsProps) {
       
         <div className="container mx-auto gap-7 grid grid-cols-3 items-start">
           <div className="grid col-span-2">
-             <AvailableCards  technologyData = {technologyData}></AvailableCards>
+             <AvailableCards  technologyData = {technologyData} selected = {selected} setSelected = {setSelected}></AvailableCards>
           </div>
            <div className="grid col-span-1 sticky top-20">
-            <SelectedCards></SelectedCards>
+            <SelectedCards selected = {selected} setSelected = {setSelected} ></SelectedCards>
            </div>
           
         </div>
