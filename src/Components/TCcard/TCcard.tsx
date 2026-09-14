@@ -1,3 +1,4 @@
+import { useState } from "react"
 import type { DataType } from "../../Type"
 
 export interface TCcardProps {
@@ -5,6 +6,14 @@ export interface TCcardProps {
 }
 
 export default function TCcard({DataCard}: TCcardProps) {
+
+
+
+  const  [AddToStack, setAddTostack] = useState<Boolean>(false)
+
+  const HandleButtonClick = () => {
+    setAddTostack(true)
+  }
     
     return (
         <div>
@@ -87,11 +96,12 @@ export default function TCcard({DataCard}: TCcardProps) {
       </div>
 
       {/* Bottom Button */}
-      <button className="mt-6 w-full rounded-xl bg-gray-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-gray-800">
-        Learn More
+      <button onClick={HandleButtonClick} className="mt-6 w-full rounded-xl bg-gray-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-gray-800">
+        {AddToStack === true ? "Selected" : " Add To Stack"  }
+        
       </button>
 
-    </div>
+    </div> 
 
         </div>
     )
